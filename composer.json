@@ -2,14 +2,25 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "aws/aws-sdk-php": "^3.317",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
-        "laravel/tinker": "^2.8"
+        "laravel/tinker": "^2.8",
+        "mongodb/laravel-mongodb": "^4.7",
+        "mongodb/mongodb": "^1.19",
+        "opensearch-project/opensearch-php": "^2.3",
+        "qualitytrade/documentdb-repository": "^1.1",
+        "qualitytrade/dynamodb-repository": "^1.0",
+        "qualitytrade/mysql-repository": "^1.0",
+        "qualitytrade/opensearch-repository": "^1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -22,6 +33,17 @@
         "pestphp/pest-plugin-laravel": "^2.0",
         "spatie/laravel-ignition": "^2.0"
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://pkg.qualitytrade.com",
+            "options": {
+                "http": {
+                    "header": ["PKG-TOKEN: nN7uQSyQUw9gpX4B"]
+                }
+            }
+        }
+    ],
     "autoload": {
         "psr-4": {
             "App\\": "app/",
